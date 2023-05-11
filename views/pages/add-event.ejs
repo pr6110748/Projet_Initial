@@ -1,0 +1,155 @@
+<%- include ('../partials/header') %>
+
+<div class="row" style="margin-left:auto;margin-right: auto;width: 90%;" id = "addForm" >
+	<form action = "http://localhost:4000/booking/add/new" method="post" class="col s12">
+
+		<div class="row" style="margin-left: auto;margin-right: auto;">
+			<h3 style = "margin-left:auto;margin-right: auto;color:green">Space reserved for stayers </h3><br>
+		</div><br>
+
+		<div class="row" style="margin-left: auto;margin-right: auto;">
+			<table class="table" ></table>
+				<tr>
+					<th style="text-align:center;color:green">
+						<h4>Principal stayer</h4>
+					</th>
+					<td>
+						<div class="form-group row">
+							<label for="firstNameP" class ="col-2 col-form-label"> First Name </label>
+							<div class="col-10">
+								<input type="text" name="firstNameP" value="" class="form-control">
+							</div>
+						</div><br>
+						<div class="form-group row">
+							<label for="lastNameP" class ="col-2 col-form-label"> Last Name </label>
+							<div class="col-10">
+								<input type="text" name="lastNameP" value="" class="form-control">
+							</div>
+						</div><br>	
+						<div class="form-group row">
+							<label for="emailP" class ="col-2 col-form-label"> Email </label>
+							<div class="col-10">
+								<input type="email" name="emailP" value="" class="form-control">
+							</div>
+						</div><br>	
+					</td>
+					
+				</tr>
+			</table><br>
+		</div><br><hr>
+
+		<div class="row" style="margin-left: auto;margin-right: auto;">
+			<table class="table" ></table>
+				<tr>
+					<th style="text-align:center;color:green">
+						<h4>Guest stayer 1</h4>
+					</th>
+					<td>
+						<div class="form-group row">
+							<label for="firstNameG1" class ="col-2 col-form-label"> First Name </label>
+							<div class="col-10">
+								<input type="text" name="firstNameG1" value="" class="form-control">
+							</div>
+						</div><br>
+						<div class="form-group row">
+							<label for="lastNameG1" class ="col-2 col-form-label"> Last Name </label>
+							<div class="col-10">
+								<input type="text" name="lastNameG1" value="" class="form-control">
+							</div>
+						</div><br>
+					</td>
+					
+				</tr>
+			</table><br>
+		</div><br><hr>
+
+		<div class="row" style="margin-left: auto;margin-right: auto;">
+			<table class="table" ></table>
+				<tr>
+					<th style="text-align:center;color:green">
+						<h4>Guest stayer 2</h4>
+					</th>
+					<td>
+						<div class="form-group row">
+							<label for="firstNameG2" class ="col-2 col-form-label"> First Name </label>
+							<div class="col-10">
+								<input type="text" name="firstNameG2" value="" class="form-control">
+							</div>
+						</div><br>
+						<div class="form-group row">
+							<label for="lastNameG2" class ="col-2 col-form-label"> Last Name </label>
+							<div class="col-10">
+								<input type="text" name="lastNameG2" value="" class="form-control">
+							</div>
+						</div><br>
+					</td>
+				</tr>
+			</table><br><br><br>
+		</div><br><hr>
+
+		<div class="row" style="margin-left: auto;margin-right: auto;">
+			<h3 style = "margin-left:auto;margin-right: auto;color:green"> Space reserved for stay information </h3><br>
+		</div><br>
+
+		<div class="row" style="margin-left: auto;margin-right: auto;">
+			<table>
+				<tr>
+					<th>
+						<label for="countDay" class ="col-2 col-form-label"> Number of Days </label>
+					</th>
+					<td>
+						<select id="client" name="countDay">
+							<option value="1" selected>1</option>
+							<option value="2" >2</option>
+							<option value="3" >3</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<label for="countClient" class ="col-2 col-form-label"> Guest Number </label>
+					</th>
+					<td>
+						<select id="client" name="countClient">
+							<option value="0" selected>0</option>
+							<option value="1" >1</option>
+							<option value="2" >2</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<label for="startDate" class ="col-2 col-form-label"> Start Date </label>
+					</th>
+					<td>
+						<div class="col-10">
+							<input type="datetime-local" name="startDate" value="" class="form-control">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<label for="endDate" class ="col-2 col-form-label"> End Date </label>
+					</th>
+					<td>
+						<div class="col-10">
+							<input type="datetime-local" name="endDate" value="" class="form-control">
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="form-group row">
+			<label id="listB" class ="col-2 col-form-label" style="display: none;"> <%= items %> </label>
+			<div class="col-10">
+				<input type="submit" name="submit" value="save booking" class ="btn btn-primary btn-lg " >
+			</div>
+		</div>
+
+		
+	</form>
+
+</div>
+
+ <%- include ('../partials/footer') %>

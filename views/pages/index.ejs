@@ -1,0 +1,50 @@
+<%- include ('../partials/header') %>
+
+<div class="row">
+	<div class="col s12">
+        <a href="/booking/add/new" style="float: left;" class="btn btn-success btn-lg">Add booking if new user </a>
+	<div>		
+</div>
+<br>
+<div class="row">
+	<div class="col s12">
+        <a href="/booking/add" style="float: right;" class="btn btn-success btn-lg">Add booking </a>
+	<div>		
+</div>
+<br>
+
+<div class="row">
+	<div class="col s12">
+        <% 
+        if (items.length>0) {%>
+			<table class="table" style="width:70%;margin-left: auto;margin-right: auto;">
+				<thead>
+				<tr>
+					<th style="width:5%;text-align:center">ID </th>
+					<th style="width:35%;text-align:center">Principal Client Name</th>
+					<th style="width:10%;text-align:center">Number of days</th>
+					<th style="width:10%;text-align:center">Number of people</th>
+					<th style="width:40%;text-align:center">Started Date</th>
+				</tr>
+				</thead>
+				<tbody>
+                    
+                    <% items.forEach(function(item,index){ %>
+                        <tr>
+                        <td style="width:5%;text-align:center"><%= index+1 %> </td>
+                        <td style="width:35%;text-align:center"><%= item.firstName %> ,  <%= item.lastName %> </td>
+						<td style="width:10%;text-align:center"><%= item.countDay %></td>
+                        <td style="width:10%;text-align:center"><%= item.countClient %></td>
+						<td style="width:40%;text-align:center"><%= item.startDate %></td>
+                        </td>
+                    </tr>
+                    <%}); %>
+				</tbody>
+			</table>
+		<% }else {%>
+			<p><strong> No Booking on the database </strong></p>
+		<% } %>
+		</div>
+	<div>			
+
+<%- include ('../partials/footer') %>
