@@ -17,14 +17,20 @@
                 -execute the **sqlSqueries.sql** in mysql WORKBENCH for set up the database
 
             ### setting MYSQL database on VS CODE
-                -open a terminal and install mysql with all those necessaries packages: 
+
+                - Before, you don't have to connect to Bell's server. uses a private server, otherwise, the commands will indicate errors.
+                - Remove the **node_module** directory, **package.json** and **package-lock.json** files;
+                - open a terminal and install mysql with all those necessaries packages: 
                     ``` npm install 
+                        npm install date-and-time
                         npm install mysql
                     ```
         
 
 # RUNNING with front-end
     The base URL is http://localhost:4000/
+        for add a new Booking, use this URL: http://localhost:4000/booking/add/new
+                                or click on **ADD NEW BOOKINK** button
     The command line for execute the code is: 
                 ```node server.js```
     if the Booking is correct, you must have a successfull page with your identification number on the link
@@ -35,6 +41,8 @@
     On the VS code terminal, run the cmd:
         ```node server.js```
     Open postman and execute the code!
-    
 
-    https://quickstarts.postman.com/guide/api-builder-node-and-mysql/index.html?index=..%2F..index#6
+
+#### if your booking is correct, you will have a link like this: http://localhost:4000/success/16825
+    on this link, **16825** is your reservation number.
+    
