@@ -19,7 +19,7 @@
             ### setting MYSQL database on VS CODE
 
                 - Before, you don't have to connect to Bell's server. uses a private server, otherwise, the commands will indicate errors.
-                - Remove the **node_module** directory, **package.json** and **package-lock.json** files;
+                - Remove the **node_module** directory, **package.json** and **package-lock.json** files if they exist;
                 - open a terminal and install mysql with all those necessaries packages: 
                     ``` npm install 
                         npm install date-and-time
